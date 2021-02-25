@@ -3,10 +3,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using HtmlToOpenXml;
 using HtmlToWord.Services;
-using PCLStorage;
-using System;
 using System.IO;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -45,8 +42,7 @@ namespace HtmlToWord.ViewModels
                     mainPart.Document.Save();
                 }
                 // save to file
-                // DependencyService.Get<IFileService>().SavePicture("testdoc.doc", generatedDocument, "docs");
-                DependencyService.Get<IFileService>().SaveAndView("testdoc.doc", generatedDocument);
+                DependencyService.Get<IFileService>().SaveAndView("SurveyDoc.docx", generatedDocument);
             }
         }
 
