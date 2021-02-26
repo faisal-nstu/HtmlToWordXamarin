@@ -16,12 +16,31 @@
     </ContentPage.Resources>
 
     <Grid>
-        <Button Margin="10" 
-                Text="Convert"
-                Command="{Binding OpenWebCommand}"
-                BackgroundColor="{StaticResource Primary}"
-                VerticalOptions="Center"
-                TextColor="White" />
+        <StackLayout Spacing="3" 
+                     Padding="15">
+            <Label Text="Text" 
+                   TextColor="Black"
+                   FontSize="Medium" />
+            <Entry Text="{Binding Text, Mode=TwoWay}" 
+                   TextColor="Black"
+                   FontSize="Medium" />
+            <Label Text="Description" 
+                   TextColor="Black"
+                   FontSize="Medium" />
+            <Entry Text="{Binding Description, Mode=TwoWay}" 
+                   TextColor="Black"
+                   FontSize="Medium" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cancel" 
+                        HorizontalOptions="FillAndExpand"/>
+                <Button Text="Save" 
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+
     </Grid>
 
 </ContentPage>
